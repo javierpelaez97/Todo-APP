@@ -25,7 +25,7 @@ export function SessionProvider({ children }) {
   const login = async (email, password) => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/users/login",
+        `${REACT_APP_API_URL}/api/users/login`,
         { email: email, password: password }
       );
       const token = response.data.token;
