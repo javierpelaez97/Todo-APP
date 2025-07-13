@@ -1,7 +1,6 @@
 
 import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css'
-
 import Navegador from './components/navegador'
 import Home from './pages/home'
 import Tareas from './pages/tareas';
@@ -9,6 +8,7 @@ import Login from './pages/login';
 import Register from './pages/register';
 import { useContext,  } from 'react';
 import { SessionContext } from './contexts/SessionContext';
+require('dotenv').config();
 
 
 function App() {

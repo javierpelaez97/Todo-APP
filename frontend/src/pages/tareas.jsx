@@ -15,7 +15,7 @@ export default function Tareas ({usuario}){
         const fetchTareas = async () => {
             
             try{
-                const response = await axios.get(`http://localhost:5000/api/tasks/userTask`)
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/tasks/userTask`)
                 setTareas(response.data)
             }catch(error){
                 console.error('Error al traer las tareas',error)

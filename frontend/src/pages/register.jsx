@@ -5,12 +5,11 @@ import Container from "react-bootstrap/esm/Container";
 import Image from "react-bootstrap/esm/Image";
 import Registro from "../../public/Images/CleanWork.jpg";
 import Button from "react-bootstrap/esm/Button";
-
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { SessionContext } from "../contexts/SessionContext";
 import { useNavigate } from "react-router-dom";
-
+require('dotenv').config();
 
 export default function Register() {
   const { register, handleSubmit } = useForm();
@@ -22,7 +21,7 @@ export default function Register() {
   function doRegister(datos) {
 
     axios
-      .post("http://localhost:5000/api/users/signup", datos)
+      .post(`${process.env.REACT_APP_API_URL}/api/users/signup`, datos)
       .then((response) => {
 
         setUser({
