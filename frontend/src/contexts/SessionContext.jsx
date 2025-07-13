@@ -25,7 +25,7 @@ export function SessionProvider({ children }) {
   const login = async (email, password) => {
     try {
       const response = await axios.post(
-        `${REACT_APP_API_URL}/api/users/login`,
+        `https://todo-app-mu-nine-85.vercel.app/api/users/login`,
         { email: email, password: password }
       );
       const token = response.data.token;

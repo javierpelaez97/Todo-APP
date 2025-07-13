@@ -21,7 +21,7 @@ export default function Register() {
   function doRegister(datos) {
 
     axios
-      .post(`${process.env.REACT_APP_API_URL}/api/users/signup`, datos)
+      .post(`https://todo-app-mu-nine-85.vercel.app/api/users/signup`, datos)
       .then((response) => {
 
         setUser({

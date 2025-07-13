@@ -10,7 +10,7 @@ export default function Tareas({ usuario }) {
   const fetchTareas = async () => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_API_URL}/api/tasks/userTask`
+        `https://todo-app-mu-nine-85.vercel.app/api/tasks/userTask`
       );
       setTareas(response.data);
     } catch (error) {
