@@ -22,7 +22,7 @@ const addTask  = async (req,res)=> {
 
 const getUserTasks = async (req, res) => {
     try {
-         const tasks = await Task.find() 
+        const tasks = await Task.find() 
         return res.json(tasks);
     } catch (error) {
         return res.status(500).json({ message: 'Error al obtener tareas', error });

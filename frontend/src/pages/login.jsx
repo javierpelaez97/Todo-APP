@@ -20,7 +20,8 @@ export default function Login(){
      const handleSubmit = async (e) => {
         e.preventDefault()
         setError(null)
-
+        console.log("Enviado datos");
+        
         const response =  await login(email.toLowerCase(), password)
 
         if(!response.success){
