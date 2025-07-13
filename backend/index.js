@@ -12,7 +12,7 @@ const app = express()
 app.use(express.json())
 
 app.use(cors({
-    origin: "https://todo-app-front-zeta.vercel.app/",
+    origin: "https://todo-app-front-zeta.vercel.app",
     methods:['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
 }))
