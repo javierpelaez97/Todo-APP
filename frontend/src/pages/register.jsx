@@ -9,7 +9,7 @@ import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { SessionContext } from "../contexts/SessionContext";
 import { useNavigate } from "react-router-dom";
-require('dotenv').config();
+
 
 export default function Register() {
   const { register, handleSubmit } = useForm();

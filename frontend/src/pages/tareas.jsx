@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import Tarea from "../components/tarea";
 import CrearTarea from "../components/CrearTarea";
 import axios from "axios";
-require('dotenv').config();
+
 
 export default function Tareas({ usuario }) {
   const [tareas, setTareas] = useState([]);
