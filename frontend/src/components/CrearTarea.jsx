@@ -18,7 +18,7 @@ export default function CrearTarea({ user , onTraerTareas }) {
     e.preventDefault();
     try {
       const res = await axios.post(
-        `http://localhost:5000/api/tasks/addTask?token=${user.token}`,
+        `https://todo-app-back-os1d.onrender.com//api/tasks/addTask?token=${user.token}`,
         form,
       );
       console.log("Tarea creada: ", res.data);
